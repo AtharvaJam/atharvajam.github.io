@@ -9,9 +9,9 @@ name_pronunciation:
 first_name: Atharva
 last_name: Jamsandekar
 
-# Status emoji
-status:
-  icon: ☕️
+# # Status emoji
+# status:
+#   icon: ☕️
 
 # Is this the primary user of the site?
 superuser: true
@@ -24,7 +24,7 @@ role: Research Assistant
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Institute for Experiential Robotics Northeastern University
+  - name: IER Northeastern University
     url: https://robotics.northeastern.edu/
 
 # Social network links
