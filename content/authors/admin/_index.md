@@ -74,7 +74,7 @@ work:
     company_url: https://www.bosch.us/
     company_logo: assets/media/icons/bosch-logo.svg
     date_start: 2024-07-08
-    date_end: 2024-20-12
+    date_end: 2024-12-20
     summary: |
       Responsibilities include:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -95,8 +95,8 @@ work:
     company_name: Drobot Inc
     company_url: https://www.drobot.ai/
     company_logo: assets/media/icons/drobot_logo.svg
-    date_start: 2022-01-01
-    date_end: 2022-12-31
+    date_start: 2022-04-25
+    date_end: 2022-08-05
     summary: |
       Responsibilities include:
       - Migrated infrastructure to a new data center
