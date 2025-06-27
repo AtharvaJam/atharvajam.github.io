@@ -69,23 +69,24 @@ education:
       
 # To add Responsibilites
 work:
-  - position: Control Software Engineer Co-op
-    company_name: Robert Bosch LLC
-    company_url: https://www.bosch.us/
-    company_logo: assets/media/icons/bosch-logo.svg
-    date_start: 2024-07-08
-    date_end: 2024-12-20
-    summary: |
-      Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+
   - position: Course Assisstant and Grader
     company_name: Northeastern University
     company_url: https://www.northeastern.edu/
     company_logo: assets/media/icons/NEU-logo.svg
     date_start: 2025-01-06
     date_end: ''
+    summary: |
+      Responsibilities include:
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - position: Control Software Engineer Co-op
+    company_name: Robert Bosch LLC
+    company_url: https://www.bosch.us/
+    company_logo: assets/media/icons/bosch-logo.svg
+    date_start: 2024-07-08
+    date_end: 2024-12-20
     summary: |
       Responsibilities include:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -150,16 +151,16 @@ skills:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 
-awards:
+awards: 
   - title: Global Winner of Shell Eco-marathon 2021
     url: https://www.shellecomarathon.com/about/previous-seasons/2021-programme/virtual-programme-2021/virtual-league-table.html
     date: '2025-07-08'
     awarder: Shell Eco-marathon
     icon: coursera
-    summary: |
+    summary: |2-
       I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
 ---
 
 ## About Me
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Atharva Jamsandekar is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
