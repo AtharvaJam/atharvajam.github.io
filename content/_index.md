@@ -14,19 +14,20 @@ sections:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
       text: ""
-      # Show a call-to-action button under your biography? (optional)
+        # Show a call-to-action button under your biography? (optional)
       button:
-        text: Download CV
+        text: Resume
         url: uploads/resume.pdf
+
     design:
       css_class: dark
       background:
         color: black
         image:
           # Add your image background to `assets/media/`.
-          filename: stacked-peaks.svg
+          filename: NEU_campus.jpg
           filters:
-            brightness: 1.0
+            brightness: 0.25
           size: cover
           position: center
           parallax: false
@@ -34,51 +35,51 @@ sections:
     content:
       title: '📚 My Research'
       subtitle: ''
-      text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
-
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
+      text: |2-
+        My research delves into the intricate dynamics of multi-agent robotic systems, addressing the fundamental challenge of ensuring both safety and optimal performance in collaborative or co-existing environments. As robotic autonomy expands, guaranteeing collision-free operation while maximizing task efficiency is paramount. 
         
-        Please reach out to collaborate 😃
+        My primary focus involves developing and implementing safety certificates through the rigorous application of Control Barrier Functions (CBFs). This approach utilizes a minimally invasive convex optimization framework, allowing robots to maintain high-level task execution while continuously adhering to critical safety constraints. 
+        
+        The objective is to engineer intelligent, scalable robotic fleets that are inherently reliable, predictable, and capable of operating safely even in highly dynamic and uncertain scenarios, paving the way for advanced autonomous applications.
     design:
       columns: '1'
+  # - block: collection
+  #   id: papers
+  #   content:
+  #     title: Featured Publications
+  #     filters:
+  #       folders:
+  #         - publication
+  #       featured_only: true
+  #   design:
+  #     view: article-grid
+  #     columns: 2
+  # - block: collection
+  #   content:
+  #     title: Recent Publications
+  #     text: ""
+  #     filters:
+  #       folders:
+  #         - publication
+  #       exclude_featured: false
+  #   design:
+  #     view: citation
+  # - block: collection
+  #   id: talks
+  #   content:
+  #     title: Recent & Upcoming Talks
+  #     filters:
+  #       folders:
+  #         - event
+  #   design:
+  #     view: article-grid
+  #     columns: 1
   - block: collection
-    id: papers
+    id: blog
     content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publication
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 2
-  - block: collection
-    content:
-      title: Recent Publications
-      text: ""
-      filters:
-        folders:
-          - publication
-        exclude_featured: false
-    design:
-      view: citation
-  - block: collection
-    id: talks
-    content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - event
-    design:
-      view: article-grid
-      columns: 1
-  - block: collection
-    id: news
-    content:
-      title: Recent News
+      title: Blog
       subtitle: ''
-      text: ''
+      text: I pen down my thoughts on topics that interest me. A work in progress!
       # Page type to display. E.g. post, talk, publication...
       page_type: post
       # Choose how many pages you would like to display (0 = all pages)

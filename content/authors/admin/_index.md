@@ -20,11 +20,11 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Research Assistant
+role: Graduate Research Assistant
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: IER Northeastern University
+  - name: Institute for Experiential Robotics, Northeastern University
     url: https://robotics.northeastern.edu/
 
 # Social network links
@@ -39,9 +39,10 @@ profiles:
     url: https://www.linkedin.com/atharva-jamsandekar
 
 interests:
-  - Safety-Critical Systems
+  - Multi-agent Robotic Systems
   - Game Theory 
-  - Information Retrieval
+  - Safety-critical Controls
+  - Autonmous Racing
 
 education:
   - area: MS Robotics
@@ -66,48 +67,64 @@ education:
     date_end: 2023-05-10
     summary: |
       GPA: 3.64/4.0
+
+      Societies/Activities: [Team AVERERA](https://www.teamaverera.com/)
       
 # To add Responsibilites
 work:
 
+  - position: Research Assistant
+    company_name: Northeastern University
+    company_url: https://www.northeastern.edu/
+    company_logo: brands/NEU-logo
+    date_start: 2023-12-20
+    date_end: ''
+    summary: |2-
+      Research that deals with multi-agent robotic systems, with a focus on safety certificates with minimal performance impact. 
+
   - position: Course Assisstant and Grader
     company_name: Northeastern University
     company_url: https://www.northeastern.edu/
-    company_logo: assets/media/icons/NEU-logo.svg
+    company_logo: brands/NEU-logo
     date_start: 2025-01-06
     date_end: ''
-    summary: |
+    summary: |2-
+      The course aims to provide students with the fundamentals of modeling and control of robotic manipulators. 
+
       Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - Assisted Professor Yasin Yazicioglu to design course topics, assignments, and projects for 40 undergrad students.
+      - Delivered demonstrations to students relating to Motion Planning and Control of Manipulators and planned out the logistics for the project.
+
   - position: Control Software Engineer Co-op
     company_name: Robert Bosch LLC
     company_url: https://www.bosch.us/
-    company_logo: assets/media/icons/bosch-logo.svg
+    company_logo: brands/bosch-logo
     date_start: 2024-07-08
     date_end: 2024-12-20
     summary: |
       Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - Developed and validated the [Automotive Connectivity Hub](https://www.bosch-mobility.com/en/solutions/connectivity/automotive-connectivity-hub/), enabling real-time vehicle CAN data collection, on-board diagnostics, and third-party app integration.
+      - Performed Verifcation \& Validation through Hardware-in-Loop testing of the Automotive Connectivity Hub and provided customer support during its launch in the North America market.
+      - Integrated and validated a retrofit predictive cruise control optimization algorithm for semi-trailer trucks on Automotive Connectivity Hub, achieving 4\% fuel savings.
+
   - position: Software Developer Intern - Autonomous Vehicles
     company_name: Drobot Inc
     company_url: https://www.drobot.ai/
-    company_logo: assets/media/icons/drobot_logo.svg
+    company_logo: brands/drobot_logo
     date_start: 2022-04-25
     date_end: 2022-08-05
-    summary: |
+    summary: |2-
+      Robotics Software developer providing Warehouse Automation solutions.
+
       Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - Elevated the Segway RMP robot’s control algorithm performance by 60%, using vehicle modeling to integrate feed-forward elements in a PID Controller
+      - Pioneered the implementation of the AprilTag framework, revolutionizing precision docking for a differential-drive robot by reducing pose error three-fold
+      - Performed analysis on raw UWB-RTLS data streamed using MQTT and eliminated 75% of the fluctuations and jitters in the data by employing Extended Kalman Filter
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Technical Skills
+  - name: Programming
     items:
       - name: Python
         description: ''
@@ -121,7 +138,73 @@ skills:
         description: ''
         percent: 40
         icon: circle-stack
-  - name: Hobbies
+  - name: Hardware
+    color: '#eeac02'
+    color_border: '#f0bf23'
+    items:
+      - name: Hiking
+        description: ''
+        percent: 60
+        icon: person-simple-walk
+      - name: Cats
+        description: ''
+        percent: 100
+        icon: cat
+      - name: Photography
+        description: ''
+        percent: 80
+        icon: camera
+  - name: Interests
+    color: '#eeac02'
+    color_border: '#f0bf23'
+    items:
+      - name: Hiking
+        description: ''
+        percent: 60
+        icon: person-simple-walk
+      - name: Cats
+        description: ''
+        percent: 100
+        icon: cat
+      - name: Photography
+        description: ''
+        percent: 80
+        icon: camera
+
+
+# Hobbies
+hobbies:
+  - name: ''
+    items:
+      - name: Skill
+        description: ''
+        percent: 80
+        icon: code-bracket
+      - name: Data Science
+        description: ''
+        percent: 100
+        icon: chart-bar
+      - name: SQL
+        description: ''
+        percent: 40
+        icon: circle-stack
+  - name: ''
+    color: '#eeac02'
+    color_border: '#f0bf23'
+    items:
+      - name: Hiking
+        description: ''
+        percent: 60
+        icon: person-simple-walk
+      - name: Cats
+        description: ''
+        percent: 100
+        icon: cat
+      - name: Photography
+        description: ''
+        percent: 80
+        icon: camera
+  - name: ''
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
@@ -154,13 +237,14 @@ skills:
 awards: 
   - title: Global Winner of Shell Eco-marathon 2021
     url: https://www.shellecomarathon.com/about/previous-seasons/2021-programme/virtual-programme-2021/virtual-league-table.html
-    date: '2025-07-08'
+    date: '2022-07-08'
     awarder: Shell Eco-marathon
-    icon: coursera
+    icon: ''
     summary: |2-
       I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
 ---
 
-## About Me
+<!-- ## About Me -->
 
-Atharva Jamsandekar is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+As a roboticist specializing in multi-agent systems, I've dedicated my career to making sure robots play well with others – and with the real world. While some might worry about a robot uprising, I'm more focused on ensuring seamless navigation and preventing any unscheduled collisions. I even leverage Game Theory to elegantly resolve conflicts when multiple agents vie for the same space or resource. My current research dives deep into safety certificates and control barrier functions, ensuring that even when robots are having a grand time exploring, they're always operating within safe, predictable parameters. Think of it as teaching cutting-edge AI manners, all while optimizing performance.
+
