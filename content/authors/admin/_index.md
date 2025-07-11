@@ -45,7 +45,7 @@ interests:
   - Autonmous Racing
 
 education:
-  - area: MS Robotics
+  - area: M.S. in Robotics
     institution: Northeastern University, Boston
     date_start: 2023-09-05
     date_end: 2025-12-20
@@ -61,12 +61,11 @@ education:
       - EECE 7150 Autonomous Field Robotics
       - ME 5250   Robot Mechanics and Control
 
-  - area: BTech Mechanical Engineering
+  - area: B.Tech. in Mechanical Engineering
     institution: Indian Institute of Technology, Varanasi
     date_start: 2019-08-22
     date_end: 2023-05-10
     summary: |
-      GPA: 3.64/4.0
 
       Societies/Activities: [Team AVERERA](https://www.teamaverera.com/)
       
@@ -129,97 +128,142 @@ skills:
       - name: Python
         description: ''
         percent: 80
-        icon: code-bracket
-      - name: Data Science
+        icon: devicon/python
+      - name: C/C++
         description: ''
         percent: 100
-        icon: chart-bar
+        icon: devicon/cplusplus
+      - name: MATLAB/Simulink
+        description: ''
+        percent: 80
+        icon: devicon/matlab
+      - name: Docker
+        description: ''
+        percent: 100
+        icon: devicon/docker
+      - name: Git
+        description: ''
+        percent: 80
+        icon: devicon/git
+      - name: Linux
+        description: ''
+        percent: 100
+        icon: devicon/linux
       - name: SQL
         description: ''
-        percent: 40
-        icon: circle-stack
-  - name: Hardware
+        percent: 100
+        icon: devicon/sqldeveloper
+      - name: Lua
+        description: ''
+        percent: 100
+        icon: devicon/lua
+  - name: Frameworks
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking
+      - name: ROS/ROS2
         description: ''
         percent: 60
-        icon: person-simple-walk
-      - name: Cats
+        icon: devicon/ros
+      - name: PyTorch
         description: ''
         percent: 100
-        icon: cat
-      - name: Photography
+        icon: devicon/pytorch
+      - name: OpenCV
         description: ''
         percent: 80
-        icon: camera
-  - name: Interests
+        icon: devicon/opencv
+      - name: Tensorflow
+        description: ''
+        percent: 100
+        icon: devicon/tensorflow
+      - name: Scikit-Learn
+        description: ''
+        percent: 80
+        icon: devicon/scikitlearn
+      - name: GTSAM
+        description: ''
+        percent: 100
+        icon: hero/map
+  - name: Hardware/Simulators
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking
+      - name: Gazebo
         description: ''
         percent: 60
-        icon: person-simple-walk
-      - name: Cats
+        icon: devicon/gazebo
+      - name: Arduino
         description: ''
         percent: 100
-        icon: cat
-      - name: Photography
+        icon: devicon/arduino
+      - name: Raspberry Pi
         description: ''
         percent: 80
-        icon: camera
+        icon: devicon/raspberrypi
+      - name: CARLA
+        description: ''
+        percent: 100
+        icon: hero/truck
+      # - name: Scikit-Learn
+      #   description: ''
+      #   percent: 80
+      #   icon: devicon/scikitlearn
+      # - name: GTSAM
+      #   description: ''
+      #   percent: 100
+      #   icon: hero/map
 
 
-# Hobbies
-hobbies:
-  - name: ''
-    items:
-      - name: Skill
-        description: ''
-        percent: 80
-        icon: code-bracket
-      - name: Data Science
-        description: ''
-        percent: 100
-        icon: chart-bar
-      - name: SQL
-        description: ''
-        percent: 40
-        icon: circle-stack
-  - name: ''
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Hiking
-        description: ''
-        percent: 60
-        icon: person-simple-walk
-      - name: Cats
-        description: ''
-        percent: 100
-        icon: cat
-      - name: Photography
-        description: ''
-        percent: 80
-        icon: camera
-  - name: ''
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Hiking
-        description: ''
-        percent: 60
-        icon: person-simple-walk
-      - name: Cats
-        description: ''
-        percent: 100
-        icon: cat
-      - name: Photography
-        description: ''
-        percent: 80
-        icon: camera
+
+# # Hobbies
+# hobbies:
+#   - name: ''
+#     items:
+#       - name: Skill
+#         description: ''
+#         percent: 80
+#         icon: code-bracket
+#       - name: Data Science
+#         description: ''
+#         percent: 100
+#         icon: chart-bar
+#       - name: SQL
+#         description: ''
+#         percent: 40
+#         icon: circle-stack
+#   - name: ''
+#     color: '#eeac02'
+#     color_border: '#f0bf23'
+#     items:
+#       - name: Hiking
+#         description: ''
+#         percent: 60
+#         icon: person-simple-walk
+#       - name: Cats
+#         description: ''
+#         percent: 100
+#         icon: cat
+#       - name: Photography
+#         description: ''
+#         percent: 80
+#         icon: camera
+#   - name: ''
+#     color: '#eeac02'
+#     color_border: '#f0bf23'
+#     items:
+#       - name: Hiking
+#         description: ''
+#         percent: 60
+#         icon: person-simple-walk
+#       - name: Cats
+#         description: ''
+#         percent: 100
+#         icon: cat
+#       - name: Photography
+#         description: ''
+#         percent: 80
+#         icon: camera
 
 # languages:
 #   - name: English
@@ -246,5 +290,5 @@ awards:
 
 <!-- ## About Me -->
 
-As a roboticist specializing in multi-agent systems, I've dedicated my career to making sure robots play well with others – and with the real world. While some might worry about a robot uprising, I'm more focused on ensuring seamless navigation and preventing any unscheduled collisions. I even leverage Game Theory to elegantly resolve conflicts when multiple agents vie for the same space or resource. My current research dives deep into safety certificates and control barrier functions, ensuring that even when robots are having a grand time exploring, they're always operating within safe, predictable parameters. Think of it as teaching cutting-edge AI manners, all while optimizing performance.
+A roboticist specializing in multi-agent systems, I've dedicated my career to making sure robots play well with others – and with the real world. While some might worry about a robot uprising, I'm more focused on ensuring seamless navigation and preventing any unscheduled collisions. I even leverage Game Theory to elegantly resolve conflicts when multiple agents vie for the same space or resource. My current research dives deep into safety certificates and control barrier functions, ensuring that even when robots are having a grand time exploring, they're always operating within safe, predictable parameters. Think of it as teaching cutting-edge AI manners, all while optimizing performance.
 

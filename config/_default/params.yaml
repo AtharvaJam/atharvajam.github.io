@@ -14,7 +14,8 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'Personal website of Atharva Jamsandekar, a software engineer and open-source enthusiast.'
+    # Updated description to highlight your robotics expertise and research areas
+    description: 'Atharva Jamsandekar: Robotics Engineer from Northeastern University specializing in multi-agent systems, safety certificates, and autonomous vehicle control. Researching Control Barrier Functions and Game Theory.'
     twitter: ''
   analytics:
     google_analytics: ''
