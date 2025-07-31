@@ -33,7 +33,7 @@ sections:
           parallax: false
   - block: markdown
     content:
-      title: '📚 My Research'
+      title: 'My Research'
       subtitle: ''
       text: |2-
         My research delves into the intricate dynamics of multi-agent robotic systems, addressing the fundamental challenge of ensuring both safety and optimal performance in collaborative or co-existing environments. As robotic autonomy expands, guaranteeing collision-free operation while maximizing task efficiency is paramount. 

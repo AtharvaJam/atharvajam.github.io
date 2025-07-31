@@ -4,7 +4,7 @@ date: 2023-10-24
 type: landing
 
 design:
-  spacing: '5rem'
+  spacing: '2rem'
 
 # Note: `username` refers to the user's folder name in `content/authors/`
 
@@ -24,7 +24,14 @@ sections:
       title: Skills
       username: admin
     design:
-      column: 3
+      column: 2
+      show_skill_percentage: false
+  - block: resume-skills
+    content:
+      title: ''
+      username: atharva
+    design:
+      column: 2
       show_skill_percentage: false
   - block: resume-awards
     content:

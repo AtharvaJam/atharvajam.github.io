@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Swarm Robotics | Atharva Jamsandekar | Portfolio</title>
+    <link>http://localhost:1313/tags/swarm-robotics/</link>
+      <atom:link href="http://localhost:1313/tags/swarm-robotics/index.xml" rel="self" type="application/rss+xml" />
+    <description>Swarm Robotics</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu8773471948244346121.png</url>
+      <title>Swarm Robotics</title>
+      <link>http://localhost:1313/tags/swarm-robotics/</link>
+    </image>
+    
+    <item>
+      <title>Control Barrier Functions</title>
+      <link>http://localhost:1313/project/cbf_investigation/</link>
+      <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/cbf_investigation/</guid>
+      <description>&lt;h2 id=&#34;project-objective&#34;&gt;Project Objective&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;research-supervisor&#34;&gt;Research Supervisor&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/yasin-yaz%C4%B1c%C4%B1o%C4%9Flu-2a6475203/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Yasin Yazicioglu&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;results--analysis&#34;&gt;Results &amp;amp; Analysis&lt;/h2&gt;
+&lt;p&gt;The trained policy achieved a 93% success rate in simulation and generalized well to real-world settings with minor calibration.&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

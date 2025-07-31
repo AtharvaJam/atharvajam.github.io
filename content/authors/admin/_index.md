@@ -30,13 +30,22 @@ organizations:
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
+profiles:
   - icon: at-symbol
     url: 'mailto:jamsandekar.a@northeastern.edu'
     label: E-mail Me
   - icon: brands/github
     url: https://github.com/atharvajam
-  - icon: brands/linkedin
+    label: Github
+  - icon: devicon/linkedin
     url: https://www.linkedin.com/atharva-jamsandekar
+    label: LinkedIn
+  - icon: devicon/gitlab
+    url: https://gitlab.com/jamsandekar.a
+    label: Gitlab
+  - icon: hero/map-pin
+    url: 'https://maps.app.goo.gl/Ne4HodeXKPFa1Do37'
+    label: Work Address- 710 EXP
 
 interests:
   - Multi-agent Robotic Systems
@@ -100,7 +109,9 @@ work:
     company_logo: brands/bosch-logo
     date_start: 2024-07-08
     date_end: 2024-12-20
-    summary: |
+    summary: |2-
+      Automotive Controls Engineer developing a comprehensive communication solution for vehicle and cloud connectivity.
+
       Responsibilities include:
       - Developed and validated the [Automotive Connectivity Hub](https://www.bosch-mobility.com/en/solutions/connectivity/automotive-connectivity-hub/), enabling real-time vehicle CAN data collection, on-board diagnostics, and third-party app integration.
       - Performed Verifcation \& Validation through Hardware-in-Loop testing of the Automotive Connectivity Hub and provided customer support during its launch in the North America market.
@@ -185,30 +196,44 @@ skills:
         description: ''
         percent: 100
         icon: hero/map
-  - name: Hardware/Simulators
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Gazebo
-        description: ''
-        percent: 60
-        icon: devicon/gazebo
-      - name: Arduino
+      - name: CAN/J1939 + LIN
         description: ''
         percent: 100
-        icon: devicon/arduino
-      - name: Raspberry Pi
-        description: ''
-        percent: 80
-        icon: devicon/raspberrypi
-      - name: CARLA
+        icon: hero/signal
+      - name: Jira
         description: ''
         percent: 100
-        icon: hero/truck
-      # - name: Scikit-Learn
-      #   description: ''
-      #   percent: 80
-      #   icon: devicon/scikitlearn
+        icon: devicon/jira
+
+        
+  # - name: Hardware/Software
+  #   color: '#eeac02'
+  #   color_border: '#f0bf23'
+  #   items:
+  #     - name: Gazebo
+  #       description: ''
+  #       percent: 60
+  #       icon: devicon/gazebo
+  #     - name: Arduino
+  #       description: ''
+  #       percent: 100
+  #       icon: devicon/arduino
+  #     - name: Raspberry Pi
+  #       description: ''
+  #       percent: 80
+  #       icon: devicon/raspberrypi
+  #     - name: CARLA
+  #       description: ''
+  #       percent: 100
+  #       icon: hero/truck
+  #     - name: Electric Vehicles
+  #       description: ''
+  #       percent: 80
+  #       icon: hero/bolt
+  #     - name: Vector CANalyzer
+  #       description: ''
+  #       percent: 80
+  #       icon: hero/adjustments-vertical
       # - name: GTSAM
       #   description: ''
       #   percent: 100
@@ -216,54 +241,7 @@ skills:
 
 
 
-# # Hobbies
-# hobbies:
-#   - name: ''
-#     items:
-#       - name: Skill
-#         description: ''
-#         percent: 80
-#         icon: code-bracket
-#       - name: Data Science
-#         description: ''
-#         percent: 100
-#         icon: chart-bar
-#       - name: SQL
-#         description: ''
-#         percent: 40
-#         icon: circle-stack
-#   - name: ''
-#     color: '#eeac02'
-#     color_border: '#f0bf23'
-#     items:
-#       - name: Hiking
-#         description: ''
-#         percent: 60
-#         icon: person-simple-walk
-#       - name: Cats
-#         description: ''
-#         percent: 100
-#         icon: cat
-#       - name: Photography
-#         description: ''
-#         percent: 80
-#         icon: camera
-#   - name: ''
-#     color: '#eeac02'
-#     color_border: '#f0bf23'
-#     items:
-#       - name: Hiking
-#         description: ''
-#         percent: 60
-#         icon: person-simple-walk
-#       - name: Cats
-#         description: ''
-#         percent: 100
-#         icon: cat
-#       - name: Photography
-#         description: ''
-#         percent: 80
-#         icon: camera
+
 
 # languages:
 #   - name: English
