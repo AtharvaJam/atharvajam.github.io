@@ -19,16 +19,56 @@
       <guid>http://localhost:1313/project/cbf_investigation/</guid>
       <description>&lt;h2 id=&#34;project-objective&#34;&gt;Project Objective&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.&lt;/p&gt;
+&lt;p&gt;To investigate and implement novel formulations of Control Barrier Functions (CBFs) for multi-robot collision avoidance, focusing on methods that are both optimal and distributed in nature. The goal is to improve safety guarantees and scalability in decentralized robotic systems.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h4 id=&#34;research-supervisor&#34;&gt;Research Supervisor&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/yasin-yaz%C4%B1c%C4%B1o%C4%9Flu-2a6475203/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Yasin Yazicioglu&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Gazebo Codebase: &lt;a href=&#34;github.com/AtharvaJam/Control-Barrier-Gazebo&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/GitHub-Repository-181717?logo=github&amp;amp;style=for-the-badge&#34; alt=&#34;GitHub&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python Codebase: &lt;a href=&#34;github.com/AtharvaJam/control_barrier_functions_py_sim&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/GitHub-Repository-181717?logo=github&amp;amp;style=for-the-badge&#34; alt=&#34;GitHub&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
-&lt;p&gt;The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;results--analysis&#34;&gt;Results &amp;amp; Analysis&lt;/h2&gt;
-&lt;p&gt;The trained policy achieved a 93% success rate in simulation and generalized well to real-world settings with minor calibration.&lt;/p&gt;
+&lt;p&gt;This project explores novel Control Barrier Function (CBF) formulations for multi-robot collision avoidance, focusing on scalability and smooth control under distributed settings. We implement two approaches: an optimal distributed CBF that allows robots to compute locally safe controls with minimal coordination, and a log-sum-exp relaxation that replaces the non-smooth minimum operator in safety constraints, resulting in better optimization performance.&lt;/p&gt;
+&lt;p&gt;The methods are evaluated in a Python-based simulator using second-order (double integrator) robot dynamics, with comparisons to a centralized CBF baseline. Key metrics include collision avoidance, control smoothness, and constraint satisfaction. To validate real-world applicability, the controllers are deployed in a Gazebo + ROS1 Noetic environment with TurtleBot3 agents operating in shared spaces. Compared to the baseline, our methods show improved safety and smoother trajectories, particularly in high-density scenarios.&lt;/p&gt;
 &lt;hr&gt;
 </description>
     </item>

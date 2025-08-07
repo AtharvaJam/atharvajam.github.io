@@ -19,13 +19,16 @@
       <guid>http://localhost:1313/project/team_averera/</guid>
       <description>&lt;h2 id=&#34;project-objective&#34;&gt;Project Objective&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.&lt;/p&gt;
+&lt;p&gt;The mission of &lt;strong&gt;Team AVERERA&lt;/strong&gt;, a student-led research and development team from IIT (BHU) Varanasi, is to accelerate the future of sustainable and autonomous mobility tailored for Indian roads. Currently focused on their urban concept vehicle &lt;em&gt;Shivaay&lt;/em&gt; and a full-scale prototype test platform, the team aims to demonstrate SAE Level-3 autonomy in challenging, real-world traffic scenarios using in-house developed drive-by-wire, localization, path planning, and perception systems.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Website:&lt;/strong&gt; &lt;a href=&#34;https://www.teamaverera.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;teamaverera.com&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&#34;contributors&#34;&gt;Contributors&lt;/h4&gt;
 &lt;p&gt;The project was performed as part of a student research team of Indian Institute of Technology (B.H.U.), Varanasi. The team members can be found &lt;a href=&#34;https://www.teamaverera.com/our-team-1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
-&lt;p&gt;The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Team AVERERA&lt;/strong&gt; develops advanced electric and autonomous vehicle technologies with a strong emphasis on system integration and real-world validation. The team has successfully engineered lightweight vehicles with carbon-fiber monocoques and low-drag geometries, such as &lt;em&gt;Shivaay&lt;/em&gt;, which achieved a drag coefficient of 0.106 and passed all 2023 Shell Eco-marathon safety and technical inspections. Their work spans stereo-LiDAR sensor fusion, emergency braking systems, UWB-based localization, and health-assistance subsystems—all tested on-road using custom-built autonomous prototypes.&lt;/p&gt;
+&lt;p&gt;Key contributions to the autonomy stack include the integration of joystick-controlled drive-by-wire systems with emergency override mechanisms, open-loop LiDAR-based braking without feedback sensors, and a real-time health monitoring module that classifies medical emergencies using k-NN and routes to the nearest hospital. A notable implementation involved a modified PID-based lateral control and constant-velocity longitudinal control using UWB-RTLS + IMU fusion for localization via Extended Kalman Filtering. The system maintained a multi-goal path with a cross-track error under 35% of the vehicle&amp;rsquo;s track width.&lt;/p&gt;
+&lt;p&gt;Beyond engineering, core team members led the development of Indian unmarked lane detection frameworks, mentored juniors through technical bootcamps, and secured ₹3 million in grant funding for autonomous urban concept vehicles. With cross-functional expertise in ROS, sensor fusion, control systems, and AI-driven perception, Team AVERERA continues to set benchmarks in student-driven autonomous mobility research.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;demo-video&#34;&gt;Demo Video&lt;/h2&gt;
 
@@ -36,9 +39,6 @@
       &gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
-&lt;hr&gt;
-&lt;h2 id=&#34;results--analysis&#34;&gt;Results &amp;amp; Analysis&lt;/h2&gt;
-&lt;p&gt;The trained policy achieved a 93% success rate in simulation and generalized well to real-world settings with minor calibration.&lt;/p&gt;
 &lt;hr&gt;
 </description>
     </item>

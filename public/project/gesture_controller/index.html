@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: July 30, 2025 --><html lang="en-us" dir="ltr"
+<!-- Last Published: August 7, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="dark">
   
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
@@ -468,7 +468,6 @@
       
       
     
-  
   
   
   
@@ -1238,7 +1237,7 @@
         <h1>Gesture-based Teleop</h1>
         <h2 id="project-objective">Project Objective</h2>
 <blockquote>
-<p>The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.</p>
+<p>To develop a modular, real-time gesture recognition system for intuitive teleoperation of the Stretch robot, enabling users to control the robot&rsquo;s base, arm, and gripper using only natural hand and arm gestures captured via a standard webcam. The goal is to improve human–robot interaction (HRI) by eliminating the need for wearable devices or complex hardware setups.</p>
 </blockquote>
 <h4 id="contributors">Contributors</h4>
 <ol>
@@ -1249,9 +1248,32 @@
 <p><a href="https://www.linkedin.com/in/gutlapalli-nikhil-chowdary/" target="_blank" rel="noopener">Nikhil Chowdary Gutlapalli</a></p>
 </li>
 </ol>
+<p><a href="https://github.com/AtharvaJam/gesture-based-teleop" target="_blank" rel="noopener">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img src="https://img.shields.io/badge/GitHub-Repository-181717?logo=github&amp;style=for-the-badge" alt="GitHub" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</a></p>
 <hr>
 <h2 id="abstract">Abstract</h2>
-<p>The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.</p>
+<p>This project presents a markerless, real-time gesture-based control framework for teleoperating the Stretch robot using off-the-shelf hardware and open-source software. Leveraging Mediapipe for hand and pose landmark detection and ROS2 for communication and control, the system translates human gestures captured via webcam into commands for the robot’s base, arm, and gripper.</p>
+<p>The architecture consists of two ROS2 nodes: a Menu Node for managing interaction modes and a Controller Node that maps gestures to robot-specific kinematics. Different gesture sets are used to control different functionalities (e.g., palm direction for base movement, finger positions for gripper control), offering intuitive transitions between modes. A “two open palms” gesture halts gesture processing and resets the system to an idle state, enhancing user control flow.</p>
+<p>Designed with modularity and accessibility in mind, the system runs on standard consumer hardware and requires no calibration or wearable devices. It offers a practical foundation for natural HRI in assistive robotics, research labs, or remote operation scenarios.</p>
 <hr>
 <h2 id="demo-video">Demo Video</h2>
 
@@ -1264,7 +1286,57 @@
 
 <hr>
 <h2 id="results--analysis">Results &amp; Analysis</h2>
-<p>The trained policy achieved a 93% success rate in simulation and generalized well to real-world settings with minor calibration.</p>
+<p>To evaluate system performance, we deployed the gesture recognition framework on the Stretch 3 robot model within the Ignition Gazebo simulator, using ROS2 Humble. All testing was conducted on a standard mid-range PC simulating a 30 FPS webcam input. A user study involving 5 participants was conducted, each performing five predefined gesture types: Base Movement, Arm Up/Down, Arm Stretch/Retract, Gripper Open/Close, and Two Palm (Idle/Quit).</p>
+<p>Across 100 gesture instances per category, we measured accuracy, recall, average latency, and false positive rates.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Gesture Type</th>
+          <th style="text-align: left">Accuracy</th>
+          <th style="text-align: left">Recall</th>
+          <th style="text-align: left">Latency (s)</th>
+          <th style="text-align: left">False Positives</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Base Movement</td>
+          <td style="text-align: left">0.95</td>
+          <td style="text-align: left">0.93</td>
+          <td style="text-align: left">0.20</td>
+          <td style="text-align: left">0.05</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Arm Up/Down</td>
+          <td style="text-align: left">0.90</td>
+          <td style="text-align: left">0.88</td>
+          <td style="text-align: left">0.22</td>
+          <td style="text-align: left">0.07</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Arm Stretch/Retract</td>
+          <td style="text-align: left">0.88</td>
+          <td style="text-align: left">0.85</td>
+          <td style="text-align: left">0.25</td>
+          <td style="text-align: left">0.09</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Gripper (Open/Close)</td>
+          <td style="text-align: left">0.96</td>
+          <td style="text-align: left">0.94</td>
+          <td style="text-align: left">0.19</td>
+          <td style="text-align: left">0.04</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Two Palms (Quit Signal)</td>
+          <td style="text-align: left">0.85</td>
+          <td style="text-align: left">0.90</td>
+          <td style="text-align: left">0.29</td>
+          <td style="text-align: left">0.15</td>
+      </tr>
+  </tbody>
+</table>
+<p>User Feedback: Participants reported that the system was easy to learn and appreciated the hover-based menu interface, especially its forgiving 2-second selection window. Some suggested improving responsiveness of the &ldquo;two palms&rdquo; gesture, though this would require balancing sensitivity against false positives. Overall, the gesture system was perceived as intuitive and effective, supporting our goal of a modular, natural HRI interface.</p>
 <hr>
 <h2 id="report">Report</h2>
 <iframe src="/uploads/projects/gesture_controller/report.pdf" width="100%" height="600px" style="border: none;">

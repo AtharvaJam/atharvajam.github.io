@@ -19,17 +19,38 @@
       <guid>http://localhost:1313/project/semantic_search/</guid>
       <description>&lt;h2 id=&#34;project-objective&#34;&gt;Project Objective&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.&lt;/p&gt;
+&lt;p&gt;A navigation system that can search for and navigate to any object specified - as an image, language, or a category - in completely unseen environments, without requiring pre-computed maps or locations of objects, while exploiting the semantics information of the environment.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;!-- #### Tech Stack
+
+&lt;img src=&#34;https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&amp;logoColor=white&amp;style=for-the-badge&#34; alt=&#34;OpenCV&#34;/&gt; &lt;img src=&#34;https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&amp;logoColor=white&amp;style=for-the-badge&#34; alt=&#34;PyTorch&#34;/&gt; &lt;img src=&#34;https://img.shields.io/badge/Docker-2496ED?logo=docker&amp;logoColor=white&amp;style=for-the-badge&#34; alt=&#34;Docker&#34;/&gt; &lt;img src=&#34;https://img.shields.io/badge/ROS-22314E?logo=ros&amp;logoColor=white&amp;style=for-the-badge&#34; alt=&#34;ROS&#34;/&gt; --&gt;
 &lt;h4 id=&#34;research-supervisor&#34;&gt;Research Supervisor&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/yasin-yaz%C4%B1c%C4%B1o%C4%9Flu-2a6475203/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Yasin Yazicioglu&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&#34;contributors&#34;&gt;Contributors&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/amin-kashiri/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Amin Kashiri&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
-&lt;p&gt;The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/aminkashiri/SemanticSearch&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/GitHub-Repository-181717?logo=github&amp;amp;style=for-the-badge&#34; alt=&#34;GitHub&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;!-- ## Demo Video
 
@@ -43,9 +64,6 @@
 
 
 --- --&gt;
-&lt;h2 id=&#34;results--analysis&#34;&gt;Results &amp;amp; Analysis&lt;/h2&gt;
-&lt;p&gt;The trained policy achieved a 93% success rate in simulation and generalized well to real-world settings with minor calibration.&lt;/p&gt;
-&lt;hr&gt;
 </description>
     </item>
     

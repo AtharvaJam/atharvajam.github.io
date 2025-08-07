@@ -12,7 +12,11 @@ image:
 
 ## Project Objective
 
-> The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.
+> A navigation system that can search for and navigate to any object specified - as an image, language, or a category - in completely unseen environments, without requiring pre-computed maps or locations of objects, while exploiting the semantics information of the environment.
+
+<!-- #### Tech Stack
+
+<img src="https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=white&style=for-the-badge" alt="OpenCV"/> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white&style=for-the-badge" alt="PyTorch"/> <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=for-the-badge" alt="Docker"/> <img src="https://img.shields.io/badge/ROS-22314E?logo=ros&logoColor=white&style=for-the-badge" alt="ROS"/> -->
 
 #### Research Supervisor
 
@@ -23,13 +27,13 @@ image:
 
 1. [Amin Kashiri](https://www.linkedin.com/in/amin-kashiri/)
 
----
 
-## Abstract
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?logo=github&style=for-the-badge)](https://github.com/aminkashiri/SemanticSearch)
 
-The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.
 
 ---
+
+
 
 
 <!-- ## Demo Video
@@ -37,12 +41,3 @@ The objective of this project was to train a visual imitation learning agent for
 {{< youtube LCxA5zYdCbA >}}
 
 --- -->
-
-## Results & Analysis
-
-
-The trained policy achieved a 93% success rate in simulation and generalized well to real-world settings with minor calibration.
-
----
-
-

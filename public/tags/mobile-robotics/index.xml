@@ -19,7 +19,7 @@
       <guid>http://localhost:1313/project/leo_explore/</guid>
       <description>&lt;h2 id=&#34;project-objective&#34;&gt;Project Objective&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.&lt;/p&gt;
+&lt;p&gt;The objective of this project was to design and implement an autonomous reconnaissance robot capable of exploring unknown environments using a modular and intelligent navigation system. The robot is designed to operate in both simulated and real-world environments, with applications ranging from disaster response to military reconnaissance.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h4 id=&#34;contributors&#34;&gt;Contributors&lt;/h4&gt;
 &lt;ol&gt;
@@ -36,9 +36,32 @@
 &lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/jiatong-wu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tim Wu&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/AtharvaJam/Leo_explore&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/GitHub-Repository-181717?logo=github&amp;amp;style=for-the-badge&#34; alt=&#34;GitHub&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
-&lt;p&gt;The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.&lt;/p&gt;
+&lt;p&gt;This project introduces the &lt;strong&gt;Reconnaissance Bot&lt;/strong&gt;, a robotic system built to navigate and explore uncharted environments with minimal human intervention. The bot uses a top-down control architecture composed of three key components:&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Frontier Server&lt;/strong&gt; identifies potential exploration goals using a K-Means clustering algorithm to process frontier points. The &lt;strong&gt;Global Planner&lt;/strong&gt; employs the A* algorithm to compute an optimal path from the robot’s current location to the selected goal. The &lt;strong&gt;Local Planner&lt;/strong&gt; implements a Model Predictive Path Integral (MPPI) control method to generate smooth, collision-free trajectories within the robot’s immediate environment.&lt;/p&gt;
+&lt;p&gt;The system integrates seamlessly with ROS-based SLAM for localization and mapping, allowing a clean separation of responsibilities between mapping and planning modules. This decoupled architecture ensures modularity, extensibility, and robust real-time performance. The Reconnaissance Bot was evaluated through extensive simulation using Gazebo and real-world testing on the Northeastern University campus.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;demo-video&#34;&gt;Demo Video&lt;/h2&gt;
 
@@ -51,7 +74,45 @@
 
 &lt;hr&gt;
 &lt;h2 id=&#34;results--analysis&#34;&gt;Results &amp;amp; Analysis&lt;/h2&gt;
-&lt;p&gt;The trained policy achieved a 93% success rate in simulation and generalized well to real-world settings with minor calibration.&lt;/p&gt;
+&lt;h3 id=&#34;simulation-testing&#34;&gt;Simulation Testing&lt;/h3&gt;
+&lt;p&gt;Two Gazebo simulation environments were used to evaluate system performance:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;TurtleBot3 House&lt;/strong&gt; — A hexagon-shaped grid map resembling a turtle.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TurtleBot3 World&lt;/strong&gt; — A more realistic, house-like indoor setup.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The primary metric used to assess performance was the &lt;strong&gt;Rate of Exploration&lt;/strong&gt;, defined as the ratio of explored area to time taken (m²/s). The simulation revealed that the exploration rate decreases non-linearly as the environment size increases, following an inverse proportionality to the 1.5th power of the area.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Environment&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Area Explored (m²)&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Time Taken (s)&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Rate of Exploration (m²/s)&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;TurtleBot3 House&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;21.88&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;74s&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.30&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;TurtleBot3 World&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;83.82&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;560s&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.15&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;real-world-testing&#34;&gt;Real-World Testing&lt;/h3&gt;
+&lt;p&gt;The system was deployed in two real-world environments at Northeastern University:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;4x4 Maze World&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hurtig Hall Corridor&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The local planner, operating at 12 Hz, successfully generated agile, real-time trajectories using MPPI. Perturbation-based trajectory sampling enabled smooth obstacle avoidance, while velocity control (0.8 m/s nominal, angular range [0, π] rad/s) facilitated natural movement. Demonstration videos captured during testing validated the planner’s effectiveness in real-world conditions, closely matching the simulation results.&lt;/p&gt;
+&lt;p&gt;Overall, the Reconnaissance Bot consistently performed seamless exploration and robust navigation across a variety of structured environments, with modular code and scalable planning strategies providing a strong foundation for future enhancements.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;report&#34;&gt;Report&lt;/h2&gt;
 &lt;iframe src=&#34;http://localhost:1313/uploads/projects/leo_explore/report.pdf&#34; width=&#34;100%&#34; height=&#34;600px&#34; style=&#34;border: none;&#34;&gt;

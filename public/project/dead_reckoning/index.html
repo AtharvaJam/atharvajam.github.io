@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: July 30, 2025 --><html lang="en-us" dir="ltr"
+<!-- Last Published: August 7, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="dark">
   
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
@@ -484,7 +484,6 @@
   
   
   
-  
 
 
 
@@ -890,6 +889,12 @@
             </li>
           <li>
               <a
+                href="#githubhttpsimgshieldsiobadgegithub-repository-181717logogithubstylefor-the-badgehttpsgithubcomatharvajamdead_reckoning"
+                class="hb-docs-link"
+              >&lt;a href=&#34;https://github.com/AtharvaJam/dead_reckoning&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/GitHub-Repository-181717?logo=github&amp;amp;style=for-the-badge&#34; alt=&#34;GitHub&#34;&gt;&lt;/a&gt;</a>
+            </li>
+          <li>
+              <a
                 href="#abstract"
                 class="hb-docs-link"
               >Abstract</a>
@@ -1168,6 +1173,9 @@
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#project-objective">Project Objective</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#githubhttpsimgshieldsiobadgegithub-repository-181717logogithubstylefor-the-badgehttpsgithubcomatharvajamdead_reckoning"></a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#abstract">Abstract</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
@@ -1217,14 +1225,135 @@
         <h1>Dead Reckoning</h1>
         <h2 id="project-objective">Project Objective</h2>
 <blockquote>
-<p>The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.</p>
+<p>The objective of this project was to implement a robust dead reckoning system for an Autonomous Vehicle using Inertial Measurement Unit (IMU) and GPS data. The goal was to estimate the vehicle&rsquo;s position and heading over time in the absence of continuous GPS signals.</p>
 </blockquote>
-<hr>
+<h2 id="githubhttpsimgshieldsiobadgegithub-repository-181717logogithubstylefor-the-badgehttpsgithubcomatharvajamdead_reckoning"><a href="https://github.com/AtharvaJam/dead_reckoning" target="_blank" rel="noopener">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img src="https://img.shields.io/badge/GitHub-Repository-181717?logo=github&amp;style=for-the-badge" alt="GitHub" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</a></h2>
 <h2 id="abstract">Abstract</h2>
-<p>The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.</p>
+<p>Dead reckoning provides position estimates by integrating motion data over time, making it crucial in environments where GPS signals are unreliable or unavailable. This project leverages IMU and GPS sensors to estimate vehicle trajectory in such conditions.</p>
+<p>A detailed drift analysis was conducted on sensor data fields such as angular velocity, linear acceleration, and magnetic field. Magnetometer calibration was performed using ellipse fitting to correct for hard and soft iron distortions, followed by a complementary filter fusion with gyroscopic data to yield stable yaw estimates.</p>
+<p>Forward velocity was computed by integrating the linear acceleration field, with drift and noise corrected using linear regression and second-derivative-based methods. The final dead reckoning estimate was obtained by transforming the velocity into the GNSS frame using real-time yaw values and integrating over time. This estimated trajectory was compared to GPS-based ground truth to evaluate system accuracy.</p>
 <hr>
 <h2 id="results--analysis">Results &amp; Analysis</h2>
-<p>The trained policy achieved a 93% success rate in simulation and generalized well to real-world settings with minor calibration.</p>
+<p>A detailed drift analysis was conducted on raw IMU and magnetometer data. Angular velocity fields exhibited near-zero mean values, confirming expected behavior under static conditions. Linear acceleration fields showed clear offsets and mild Gaussian resemblance, while magnetometer readings revealed strong soft and hard iron distortions due to surrounding ferrous materials. The table below summarizes key statistics and drift estimates (per hour) based on linear regression slopes:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"><strong>Field</strong></th>
+          <th style="text-align: left"><strong>Range</strong></th>
+          <th style="text-align: left"><strong>Mean</strong></th>
+          <th style="text-align: left"><strong>Std. Dev.</strong></th>
+          <th style="text-align: left"><strong>Drift/hr</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">angular_velocity.x</td>
+          <td style="text-align: left">0.005924</td>
+          <td style="text-align: left">-0.000008</td>
+          <td style="text-align: left">0.000668</td>
+          <td style="text-align: left">0.000120</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">angular_velocity.y</td>
+          <td style="text-align: left">0.008824</td>
+          <td style="text-align: left">0.000001</td>
+          <td style="text-align: left">0.000946</td>
+          <td style="text-align: left">-0.000044</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">angular_velocity.z</td>
+          <td style="text-align: left">0.005469</td>
+          <td style="text-align: left">0.000003</td>
+          <td style="text-align: left">0.000661</td>
+          <td style="text-align: left">0.000012</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">linear_acceleration.x</td>
+          <td style="text-align: left">0.103000</td>
+          <td style="text-align: left">0.340901</td>
+          <td style="text-align: left">0.012759</td>
+          <td style="text-align: left">-0.002971</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">linear_acceleration.y</td>
+          <td style="text-align: left">0.110000</td>
+          <td style="text-align: left">0.514315</td>
+          <td style="text-align: left">0.012946</td>
+          <td style="text-align: left">0.038681</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">linear_acceleration.z</td>
+          <td style="text-align: left">0.142000</td>
+          <td style="text-align: left">-9.581304</td>
+          <td style="text-align: left">0.016636</td>
+          <td style="text-align: left">0.003671</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">magnetic_field.x</td>
+          <td style="text-align: left">0.006700</td>
+          <td style="text-align: left">-0.044128</td>
+          <td style="text-align: left">0.000583</td>
+          <td style="text-align: left">0.000871</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">magnetic_field.y</td>
+          <td style="text-align: left">0.102100</td>
+          <td style="text-align: left">-0.056231</td>
+          <td style="text-align: left">0.001725</td>
+          <td style="text-align: left">0.000240</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">magnetic_field.z</td>
+          <td style="text-align: left">0.013100</td>
+          <td style="text-align: left">0.325593</td>
+          <td style="text-align: left">0.002345</td>
+          <td style="text-align: left">-0.006147</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">roll</td>
+          <td style="text-align: left">0.002409</td>
+          <td style="text-align: left">-0.053638</td>
+          <td style="text-align: left">0.000585</td>
+          <td style="text-align: left">-0.003869</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">pitch</td>
+          <td style="text-align: left">0.001117</td>
+          <td style="text-align: left">0.035515</td>
+          <td style="text-align: left">0.000151</td>
+          <td style="text-align: left">-0.000346</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">yaw</td>
+          <td style="text-align: left">0.011048</td>
+          <td style="text-align: left">2.252649</td>
+          <td style="text-align: left">0.001668</td>
+          <td style="text-align: left">0.006994</td>
+      </tr>
+  </tbody>
+</table>
+<p>Yaw estimation was improved through magnetometer calibration using ellipse fitting to correct hard and soft iron distortions. A complementary filter (α = 0.9) was used to blend the magnetometer-based yaw with gyroscope integration, balancing long-term stability with short-term responsiveness. Forward velocity was computed by integrating the linear acceleration (x-axis), followed by drift correction using regression and second-derivative thresholding. These corrections enabled more accurate velocity profiles, especially in stationary segments where the raw IMU data showed spurious motion.</p>
+<p>Dead reckoning was performed by transforming the corrected velocity from the vehicle frame to the GNSS frame using yaw data. The resulting trajectory, derived by integrating easting and northing components, was compared with GPS ground truth. Trajectories generated using IMU yaw outperformed those using complementary-filtered yaw during motion, reinforcing the role of angular velocity in dynamic heading estimation. Overall, the fusion of IMU and GPS data produced accurate, drift-compensated trajectories suitable for real-world navigation tasks.</p>
 <hr>
 <h2 id="report">Report</h2>
 <iframe src="/uploads/projects/dead_reckoning/report.pdf" width="100%" height="600px" style="border: none;">

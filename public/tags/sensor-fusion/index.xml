@@ -19,14 +19,135 @@
       <guid>http://localhost:1313/project/dead_reckoning/</guid>
       <description>&lt;h2 id=&#34;project-objective&#34;&gt;Project Objective&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.&lt;/p&gt;
+&lt;p&gt;The objective of this project was to implement a robust dead reckoning system for an Autonomous Vehicle using Inertial Measurement Unit (IMU) and GPS data. The goal was to estimate the vehicle&amp;rsquo;s position and heading over time in the absence of continuous GPS signals.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;hr&gt;
+&lt;h2 id=&#34;githubhttpsimgshieldsiobadgegithub-repository-181717logogithubstylefor-the-badgehttpsgithubcomatharvajamdead_reckoning&#34;&gt;&lt;a href=&#34;https://github.com/AtharvaJam/dead_reckoning&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/GitHub-Repository-181717?logo=github&amp;amp;style=for-the-badge&#34; alt=&#34;GitHub&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
-&lt;p&gt;The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.&lt;/p&gt;
+&lt;p&gt;Dead reckoning provides position estimates by integrating motion data over time, making it crucial in environments where GPS signals are unreliable or unavailable. This project leverages IMU and GPS sensors to estimate vehicle trajectory in such conditions.&lt;/p&gt;
+&lt;p&gt;A detailed drift analysis was conducted on sensor data fields such as angular velocity, linear acceleration, and magnetic field. Magnetometer calibration was performed using ellipse fitting to correct for hard and soft iron distortions, followed by a complementary filter fusion with gyroscopic data to yield stable yaw estimates.&lt;/p&gt;
+&lt;p&gt;Forward velocity was computed by integrating the linear acceleration field, with drift and noise corrected using linear regression and second-derivative-based methods. The final dead reckoning estimate was obtained by transforming the velocity into the GNSS frame using real-time yaw values and integrating over time. This estimated trajectory was compared to GPS-based ground truth to evaluate system accuracy.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;results--analysis&#34;&gt;Results &amp;amp; Analysis&lt;/h2&gt;
-&lt;p&gt;The trained policy achieved a 93% success rate in simulation and generalized well to real-world settings with minor calibration.&lt;/p&gt;
+&lt;p&gt;A detailed drift analysis was conducted on raw IMU and magnetometer data. Angular velocity fields exhibited near-zero mean values, confirming expected behavior under static conditions. Linear acceleration fields showed clear offsets and mild Gaussian resemblance, while magnetometer readings revealed strong soft and hard iron distortions due to surrounding ferrous materials. The table below summarizes key statistics and drift estimates (per hour) based on linear regression slopes:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Field&lt;/strong&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Range&lt;/strong&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Mean&lt;/strong&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Std. Dev.&lt;/strong&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Drift/hr&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;angular_velocity.x&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.005924&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;-0.000008&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.000668&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.000120&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;angular_velocity.y&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.008824&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.000001&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.000946&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;-0.000044&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;angular_velocity.z&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.005469&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.000003&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.000661&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.000012&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;linear_acceleration.x&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.103000&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.340901&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.012759&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;-0.002971&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;linear_acceleration.y&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.110000&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.514315&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.012946&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.038681&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;linear_acceleration.z&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.142000&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;-9.581304&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.016636&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.003671&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;magnetic_field.x&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.006700&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;-0.044128&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.000583&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.000871&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;magnetic_field.y&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.102100&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;-0.056231&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.001725&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.000240&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;magnetic_field.z&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.013100&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.325593&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.002345&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;-0.006147&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;roll&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.002409&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;-0.053638&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.000585&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;-0.003869&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;pitch&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.001117&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.035515&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.000151&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;-0.000346&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;yaw&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.011048&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;2.252649&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.001668&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.006994&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Yaw estimation was improved through magnetometer calibration using ellipse fitting to correct hard and soft iron distortions. A complementary filter (α = 0.9) was used to blend the magnetometer-based yaw with gyroscope integration, balancing long-term stability with short-term responsiveness. Forward velocity was computed by integrating the linear acceleration (x-axis), followed by drift correction using regression and second-derivative thresholding. These corrections enabled more accurate velocity profiles, especially in stationary segments where the raw IMU data showed spurious motion.&lt;/p&gt;
+&lt;p&gt;Dead reckoning was performed by transforming the corrected velocity from the vehicle frame to the GNSS frame using yaw data. The resulting trajectory, derived by integrating easting and northing components, was compared with GPS ground truth. Trajectories generated using IMU yaw outperformed those using complementary-filtered yaw during motion, reinforcing the role of angular velocity in dynamic heading estimation. Overall, the fusion of IMU and GPS data produced accurate, drift-compensated trajectories suitable for real-world navigation tasks.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;report&#34;&gt;Report&lt;/h2&gt;
 &lt;iframe src=&#34;http://localhost:1313/uploads/projects/dead_reckoning/report.pdf&#34; width=&#34;100%&#34; height=&#34;600px&#34; style=&#34;border: none;&#34;&gt;

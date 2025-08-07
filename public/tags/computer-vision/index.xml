@@ -19,7 +19,7 @@
       <guid>http://localhost:1313/project/gesture_controller/</guid>
       <description>&lt;h2 id=&#34;project-objective&#34;&gt;Project Objective&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.&lt;/p&gt;
+&lt;p&gt;To develop a modular, real-time gesture recognition system for intuitive teleoperation of the Stretch robot, enabling users to control the robot&amp;rsquo;s base, arm, and gripper using only natural hand and arm gestures captured via a standard webcam. The goal is to improve human–robot interaction (HRI) by eliminating the need for wearable devices or complex hardware setups.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h4 id=&#34;contributors&#34;&gt;Contributors&lt;/h4&gt;
 &lt;ol&gt;
@@ -30,9 +30,32 @@
 &lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/gutlapalli-nikhil-chowdary/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nikhil Chowdary Gutlapalli&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/AtharvaJam/gesture-based-teleop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/GitHub-Repository-181717?logo=github&amp;amp;style=for-the-badge&#34; alt=&#34;GitHub&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
-&lt;p&gt;The objective of this project was to train a visual imitation learning agent for a robotic pouring task, and validate the performance in both simulated and real environments.&lt;/p&gt;
+&lt;p&gt;This project presents a markerless, real-time gesture-based control framework for teleoperating the Stretch robot using off-the-shelf hardware and open-source software. Leveraging Mediapipe for hand and pose landmark detection and ROS2 for communication and control, the system translates human gestures captured via webcam into commands for the robot’s base, arm, and gripper.&lt;/p&gt;
+&lt;p&gt;The architecture consists of two ROS2 nodes: a Menu Node for managing interaction modes and a Controller Node that maps gestures to robot-specific kinematics. Different gesture sets are used to control different functionalities (e.g., palm direction for base movement, finger positions for gripper control), offering intuitive transitions between modes. A “two open palms” gesture halts gesture processing and resets the system to an idle state, enhancing user control flow.&lt;/p&gt;
+&lt;p&gt;Designed with modularity and accessibility in mind, the system runs on standard consumer hardware and requires no calibration or wearable devices. It offers a practical foundation for natural HRI in assistive robotics, research labs, or remote operation scenarios.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;demo-video&#34;&gt;Demo Video&lt;/h2&gt;
 
@@ -45,7 +68,57 @@
 
 &lt;hr&gt;
 &lt;h2 id=&#34;results--analysis&#34;&gt;Results &amp;amp; Analysis&lt;/h2&gt;
-&lt;p&gt;The trained policy achieved a 93% success rate in simulation and generalized well to real-world settings with minor calibration.&lt;/p&gt;
+&lt;p&gt;To evaluate system performance, we deployed the gesture recognition framework on the Stretch 3 robot model within the Ignition Gazebo simulator, using ROS2 Humble. All testing was conducted on a standard mid-range PC simulating a 30 FPS webcam input. A user study involving 5 participants was conducted, each performing five predefined gesture types: Base Movement, Arm Up/Down, Arm Stretch/Retract, Gripper Open/Close, and Two Palm (Idle/Quit).&lt;/p&gt;
+&lt;p&gt;Across 100 gesture instances per category, we measured accuracy, recall, average latency, and false positive rates.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Gesture Type&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Accuracy&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Recall&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Latency (s)&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;False Positives&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Base Movement&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.95&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.93&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.20&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.05&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Arm Up/Down&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.90&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.88&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.22&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.07&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Arm Stretch/Retract&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.88&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.85&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.25&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.09&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Gripper (Open/Close)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.96&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.94&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.19&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.04&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Two Palms (Quit Signal)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.85&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.90&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.29&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;0.15&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;User Feedback: Participants reported that the system was easy to learn and appreciated the hover-based menu interface, especially its forgiving 2-second selection window. Some suggested improving responsiveness of the &amp;ldquo;two palms&amp;rdquo; gesture, though this would require balancing sensitivity against false positives. Overall, the gesture system was perceived as intuitive and effective, supporting our goal of a modular, natural HRI interface.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;report&#34;&gt;Report&lt;/h2&gt;
 &lt;iframe src=&#34;http://localhost:1313/uploads/projects/gesture_controller/report.pdf&#34; width=&#34;100%&#34; height=&#34;600px&#34; style=&#34;border: none;&#34;&gt;

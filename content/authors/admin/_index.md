@@ -40,9 +40,9 @@ profiles:
   - icon: devicon/linkedin
     url: https://www.linkedin.com/atharva-jamsandekar
     label: LinkedIn
-  - icon: devicon/gitlab
-    url: https://gitlab.com/jamsandekar.a
-    label: Gitlab
+  # - icon: devicon/gitlab
+  #   url: https://gitlab.com/jamsandekar.a
+  #   label: Gitlab
   - icon: hero/map-pin
     url: 'https://maps.app.goo.gl/Ne4HodeXKPFa1Do37'
     label: Work Address- 710 EXP
@@ -164,10 +164,10 @@ skills:
         description: ''
         percent: 100
         icon: devicon/sqldeveloper
-      - name: Lua
+      - name: VS Code
         description: ''
         percent: 100
-        icon: devicon/lua
+        icon: devicon/vscode
   - name: Frameworks
     color: '#eeac02'
     color_border: '#f0bf23'
@@ -263,7 +263,7 @@ awards:
     awarder: Shell Eco-marathon
     icon: ''
     summary: |2-
-      I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
+      Shell Eco-marathon is a global academic programme that challenges talented students to design and build cars, considering technical and behavioral factors to achieve game-changing energy efficiency results. I participated as part of Team AVERERA in the Electric Urban-concept Vehicle category, presenting our flagship vehicle - Shivaay.
 ---
 
 <!-- ## About Me -->
